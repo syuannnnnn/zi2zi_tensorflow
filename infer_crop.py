@@ -1,5 +1,6 @@
 import os
 import cv2
+from tqdm import tqdm
 
 # 資料夾路徑
 input_folder = "infer_1"
@@ -10,6 +11,9 @@ os.makedirs(output_folder, exist_ok=True)
 
 # 取得資料夾中所有檔案
 image_file_names = os.listdir(input_folder)
+
+# 進度條初始化
+progress_bar = tqdm(total=len(image_file_names), desc='Processing Images', unit='image')
 
 # 逐一處理每張圖片
 for image_name in image_file_names:
@@ -39,4 +43,9 @@ for image_name in image_file_names:
     output_path = os.path.join(output_folder, image_name)
     cv2.imwrite(output_path, result_image)
 
-    #print(f"Image '{image_name}' processed and saved to '{output_path}'")
+    # 更新進度條
+    progress_bar.update(1)
+
+# 關閉進度條
+progress_bar.close()
+print("Image processing completed.")
