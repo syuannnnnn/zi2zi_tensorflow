@@ -29,10 +29,10 @@ DEFAULT_CHARSET = "./charset/cjk.json"
 def load_global_charset():
     global CN_CHARSET, JP_CHARSET, KR_CHARSET, CN_T_CHARSET, TWTrain_CHARSET, TWVal_CHARSET
     cjk = json.load(open(DEFAULT_CHARSET))
-    CN_CHARSET = cjk["gbk"]
-    JP_CHARSET = cjk["jp"]
-    KR_CHARSET = cjk["kr"]
-    CN_T_CHARSET = cjk["gb2312_t"]
+    #CN_CHARSET = cjk["gbk"]
+    #JP_CHARSET = cjk["jp"]
+    #KR_CHARSET = cjk["kr"]
+    #CN_T_CHARSET = cjk["gb2312_t"]
     TWTrain_CHARSET = cjk["twTrain"]
     TWVal_CHARSET = cjk["twVal"]
 
