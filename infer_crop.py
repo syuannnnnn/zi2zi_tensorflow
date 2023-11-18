@@ -2,7 +2,7 @@ import os
 import cv2
 
 # 資料夾路徑
-input_folder = "D:\zi2zi\experiment\infer_testing"
+input_folder = "D:\zi2zi\experiment\infer_1"
 output_folder = "D:\zi2zi\experiment\infer_crop"
 
 # 確保輸出資料夾存在
